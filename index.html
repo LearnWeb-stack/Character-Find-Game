@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Attributes Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Character Attributes Game</h1>
+    
+    <div class="game-container">
+        <div class="game-header">
+            <h2>Guess the Character Attributes</h2>
+            <div class="score">Score: <span id="currentScore">0</span>/<span id="totalQuestions">0</span></div>
+        </div>
+        
+        <div class="character-display">
+            <img id="characterImage" class="character-image" src="images/character-find.webp" alt="Character"> 
+            <div class="character-name" id="characterName">???</div>
+            <div id="characterDisposition"></div>
+        </div>
+        
+        <div class="question-section">
+            <div class="question" id="question">Loading question...</div>
+            <div class="answer-buttons">
+                <button id="yesBtn">Yes</button>
+                <button id="noBtn">No</button>
+            </div>
+        </div>
+        
+        <div class="result-section" id="resultSection">
+            <h3 id="resultText">Correct!</h3>
+        </div>
+        
+        <div class="attributes-container" id="attributesContainer">
+            <h3>Character Attributes</h3>
+            <ul class="attribute-list" id="attributeList"></ul>
+        </div>
+        
+        <div class="game-end" id="gameEnd">
+            <h2>Game Complete!</h2>
+            <div id="finalScore">You scored: 0/0</div>
+            <p>You've completed all questions for this character!</p>
+        </div>
+        
+        <div class="controls">
+            <button id="showAttributesBtn">Show Attributes</button>
+            <button id="newGameBtn">New Game</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
