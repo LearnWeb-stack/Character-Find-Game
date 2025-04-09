@@ -3,53 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Character Attributes Game</title>
+    <title>Roblox Character Guessing Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Character Attributes Game</h1>
-    
-    <div class="game-container">
-        <div class="game-header">
-            <h2>Guess the Character Attributes</h2>
-            <div class="score">Score: <span id="currentScore">0</span>/<span id="totalQuestions">0</span></div>
-        </div>
+    <div class="container">
+        <h1>Roblox Character Guesser</h1>
         
-        <div class="character-display">
-            <img id="characterImage" class="character-image" src="images/character-find.webp" alt="Character"> 
-            <div class="character-name" id="characterName">???</div>
-            <div id="characterDisposition"></div>
-        </div>
-        
-        <div class="question-section">
-            <div class="question" id="question">Loading question...</div>
-            <div class="answer-buttons">
-                <button id="yesBtn">Yes</button>
-                <button id="noBtn">No</button>
+        <div class="card">
+            <h2>Guess My Character</h2>
+            <p>Think of a character and I'll try to guess it by asking questions. Answer Yes or No to each question.</p>
+            
+            <div class="card">
+                <p>Characters remaining: <span id="characters-remaining">25</span></p>
+                <div id="progress-container">
+                    <div id="progress-bar"></div>
+                </div>
+                <p id="question-count">Question 0 of 19</p>
+            </div>
+            
+            <div class="card">
+                <p id="current-question">Press Start to begin!</p>
+                <div id="game-result"></div>
+                <div class="character-display" id="character-display" style="display: none;">
+                    <img id="character-image" class="character-image" src="" alt="Character">
+                    <p id="character-name" style="font-weight: bold; font-size: 18px;"></p>
+                </div>
+                <div class="controls">
+                    <button id="start-game">Start Game</button>
+                    <button id="answer-yes" style="display: none;">Yes</button>
+                    <button id="answer-no" style="display: none;">No</button>
+                    <button id="reset-game" style="display: none;">Reset Game</button>
+                </div>
+            </div>
+            
+            <div class="card" id="remaining-characters-container" style="display: none;">
+                <h3>Possible Characters:</h3>
+                <div id="remaining-characters" class="character-list"></div>
             </div>
         </div>
-        
-        <div class="result-section" id="resultSection">
-            <h3 id="resultText">Correct!</h3>
-        </div>
-        
-        <div class="attributes-container" id="attributesContainer">
-            <h3>Character Attributes</h3>
-            <ul class="attribute-list" id="attributeList"></ul>
-        </div>
-        
-        <div class="game-end" id="gameEnd">
-            <h2>Game Complete!</h2>
-            <div id="finalScore">You scored: 0/0</div>
-            <p>You've completed all questions for this character!</p>
-        </div>
-        
-        <div class="controls">
-            <button id="showAttributesBtn">Show Attributes</button>
-            <button id="newGameBtn">New Game</button>
-        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
